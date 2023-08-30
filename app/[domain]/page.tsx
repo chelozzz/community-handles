@@ -107,11 +107,11 @@ export default async function IndexPage({
     <main className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
       <div className="flex max-w-[980px] flex-col items-start gap-4">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
-          Get your own {domain} <br className="hidden sm:inline" />
-          handle for Bluesky
+          Obtené tu usuario {domain} <br className="hidden sm:inline" />
+          para Bluesky
         </h1>
         <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
-          Follow the instructions below to get your own {domain} handle
+          Seguí estos pasos para obtener tu usuario {domain}
         </p>
       </div>
       <div>
@@ -125,18 +125,18 @@ export default async function IndexPage({
                 <Input
                   type="text"
                   name="handle"
-                  placeholder="example.bsky.social"
+                  placeholder="ejemplo.bsky.social"
                   defaultValue={handle}
                   required
                 />
                 <Button type="submit">Submit</Button>
               </div>
               <p className="text-sm text-muted-foreground">
-                Enter your current handle, not including the @
+                Ingresá tu usuario actual, sin incluir la @
               </p>
               {error1 && (
                 <p className="flex flex-row items-center gap-2 text-sm text-red-500">
-                  <X className="h-4 w-4" /> Handle not found - please try again
+                  <X className="h-4 w-4" /> Usuario no encontrado, por favor intentá nuevamente
                 </p>
               )}
               {profile && (
@@ -164,8 +164,8 @@ export default async function IndexPage({
                 <Button type="submit">Submit</Button>
               </div>
               <p className="text-sm text-muted-foreground ">
-                Enter the {domain} handle that you would like to have, not
-                including the @
+                Ingresá el usuario {domain} que te gustaría tener, sin
+                incluir la @
               </p>
               {error2 && (
                 <p className="text-sm text-red-500">
