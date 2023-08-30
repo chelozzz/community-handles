@@ -1,19 +1,9 @@
-import { siteConfig } from "@/config/site"
-import { MainNav } from "@/components/main-nav"
-import { SiteHeader } from "@/components/site-header"
+import Maintenance from "@/components/maintenance"
 
-interface Props {
-  children: React.ReactNode
-  params: { domain: string }
-}
-
-export default function DomainLayout({ children, params }: Props) {
+export default function DomainLayout() {
   return (
     <>
-      <SiteHeader items={siteConfig.mainNav}>
-        <MainNav title={params.domain} items={siteConfig.mainNav} />
-      </SiteHeader>
-      <div className="flex flex-1 flex-col">{children}</div>
+      <div className="flex flex-1 flex-col"><Maintenance /></div>
     </>
   )
 }
